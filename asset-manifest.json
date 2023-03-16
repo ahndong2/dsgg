@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dsgg/static/css/main.073c9b0a.css",
+    "main.js": "/dsgg/static/js/main.b8db1f3a.js",
+    "static/js/787.b851413d.chunk.js": "/dsgg/static/js/787.b851413d.chunk.js",
+    "static/media/logo.svg": "/dsgg/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/dsgg/index.html",
+    "main.073c9b0a.css.map": "/dsgg/static/css/main.073c9b0a.css.map",
+    "main.b8db1f3a.js.map": "/dsgg/static/js/main.b8db1f3a.js.map",
+    "787.b851413d.chunk.js.map": "/dsgg/static/js/787.b851413d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.b8db1f3a.js"
+  ]
+}
