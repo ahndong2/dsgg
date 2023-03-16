@@ -1,8 +1,8 @@
-const express = require('express');
-const User = require('../models/user');
+import express, { Request, Response } from 'express'; 
+import { User } from '../models/user.js';
 
 export const usersRouter = express.Router(); 
-usersRouter.post('/users', (req, res) => {
+usersRouter.post('/', async (req: Request, res: Response) => {
   if (req.body.userId === "") {
     return res.status(400).json({
       error: "EMPTY USERID",
@@ -22,9 +22,6 @@ usersRouter.post('/users', (req, res) => {
     name: req.body.userName,
   });
  
-  user.save(err => {
-    if (err) throw err;
-    return res.json({ success: true });
-  });
+  const addUser = await user.save();
+  if(addUser){res.json({ success: true });}
 });
- 

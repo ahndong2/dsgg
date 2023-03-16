@@ -1,11 +1,15 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "es6",
+      "es5",
     ],
+    "noImplicitAny": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,11 +20,16 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types", "types"],
   },
+  "exclude": [
+    "./src/stories/*",
+    "./src/**/*.stories.*",
+  ],
   "include": [
-    "src"
-  ]
+    "./src/**/*",
+    "tsconfig.paths.json",
+  ],
 }
