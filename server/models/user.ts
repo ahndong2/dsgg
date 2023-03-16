@@ -1,4 +1,4 @@
-import {Schema, model, Model} from 'mongoose';
+import { Schema, model, Model } from "mongoose";
 
 export interface DBUser {
   userId: String;
@@ -10,17 +10,12 @@ export interface DBUser {
 interface DBUserModel extends Model<DBUser> {}
 // 스키마 객체 생성
 const UserSchema = new Schema<DBUser>({
-	userId: {type: String},
-  userName: {type: String},
-  createdDate: {
-    type: Date,
-    default: Date.now // 현재 날짜를 기본값으로 지정
-	},
-	modifiedDate: {
-    type: Date,
-    default: Date.now // 현재 날짜를 기본값으로 지정
-	}
-})
+  userId: { type: String, required: true, default: "" },
+  userName: { type: String, required: true, default: "" },
+  point: { type: Number, required: true, default: 0.0 },
+  createdDate: { type: Date, default: Date.now },
+  modifiedDate: { type: Date, default: Date.now },
+});
 
 // 모델 생성
-export const User = model<DBUser,DBUserModel>('User', UserSchema);
+export const User = model<DBUser, DBUserModel>("User", UserSchema);

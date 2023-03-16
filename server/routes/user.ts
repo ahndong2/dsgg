@@ -1,27 +1,36 @@
-import express, { Request, Response } from 'express'; 
-import { User } from '../models/user.js';
+import express, { Request, Response } from "express";
+import { User } from "../models/user.js";
 
-export const userRouter = express.Router(); 
-userRouter.post('/', async (req: Request, res: Response) => {
-  if (req.body.userId === "") {
-    return res.status(400).json({
-      error: "EMPTY USERID",
-      code: 2
+export const userRouter = express.Router();
+userRouter
+  .get("/", async (req: Request, res: Response) => {
+    try {
+      const user = await User.find({ userId: req.params.id });
+      res.status(200).json(user);
+    } catch (error: unknown) {
+      res.status(500).json({
+        code: 1,
+        error: "ERROR QUERY RESULT",
+      });
+    }
+  })
+  .post("/", async (req: Request, res: Response) => {
+    const { userId, userName, point } = req.body;
+    if (userId === "" || userName === "" || point === "") {
+      return res.status(400).json({
+        code: 2,
+        error: "EMPTY REQUEST PARAMS",
+      });
+    }
+
+    let user = new User({
+      userId: req.body.userId,
+      userName: req.body.userName,
+      point: req.body.point,
     });
-  }
- 
-  if (req.body.userName === "") {
-    return res.status(400).json({
-      error: "EMPTY USERNAME",
-      code: 2
-    });
-  }
- 
-  let user = new User({
-    id : req.body.userId,
-    name: req.body.userName,
+
+    const addUser = await user.save();
+    if (addUser) {
+      res.status(200).json({ success: true });
+    }
   });
- 
-  const addUser = await user.save();
-  if(addUser){res.json({ success: true });}
-});
