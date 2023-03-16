@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 // import {riotRoute, usersRouter} from './routes/index.js';
 import {riotRoute} from './routes/riot.js'
-import {usersRouter} from './routes/users.js';
+import {userRouter} from './routes/user.js';
 const __dirname = path.resolve();
 
 const app: Express = express();
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use('/api/riot', riotRoute);
-app.use('/api/users',usersRouter);
+app.use('/api/users',userRouter);
 app.listen(port);
 
 // CONNECT TO MONGODB SERVER

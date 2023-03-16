@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express'; 
 import { User } from '../models/user.js';
 
-export const usersRouter = express.Router(); 
-usersRouter.post('/', async (req: Request, res: Response) => {
+export const userRouter = express.Router(); 
+userRouter.post('/', async (req: Request, res: Response) => {
   if (req.body.userId === "") {
     return res.status(400).json({
       error: "EMPTY USERID",
