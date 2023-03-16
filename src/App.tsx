@@ -1,8 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+import { useSampleQuery } from "./query/hooks";
+import { useMutateSample } from "./query/mutations";
 
 function App() {
+  const sampleQuery = useSampleQuery({ id: 1 });
+  const { mutateAsync: mutateFn } = useMutateSample({
+    onSuccess: () => {},
+    onError: () => {},
+    onMutate: () => {},
+  });
   return (
     <div className="App">
       <header className="App-header">
