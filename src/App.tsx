@@ -5,6 +5,8 @@ import "./App.css";
 import { useSampleQuery } from "./query/hooks";
 import { useMutateSample } from "./query/mutations";
 
+import { Button } from "@mui/material";
+
 function App() {
   const sampleQuery = useSampleQuery({ id: 1 });
   const { mutateAsync: mutateFn } = useMutateSample({
@@ -16,9 +18,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Button variant="contained">hi</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
