@@ -1,7 +1,9 @@
+import { ObjectId } from 'mongodb';
 import {Schema, model, Model} from 'mongoose';
 
 
 interface DBUser {
+  _id: ObjectId;
   userId: String;
   userName: String;
   createdDate: Date;
@@ -10,6 +12,7 @@ interface DBUser {
 interface DBUserModel extends Model<DBUser> {}
 // 스키마 객체 생성
 const UserSchema = new Schema<DBUser>({
+  _id: {type: ObjectId},
 	userId: {type: String},
   userName: {type: String},
   createdDate: {
