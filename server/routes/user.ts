@@ -6,7 +6,9 @@ userRouter
   .get("/user", async (req: Request, res: Response) => {
     try {
       const { userId } = req.params;
-      const user = await User.find({ userId: userId });
+      const filter = userId ? { userId: userId } : {};
+
+      const user = await User.find(filter);
       res.status(200).json(user);
     } catch (error: unknown) {
       res.status(500).json({
@@ -18,6 +20,7 @@ userRouter
   .post("/user", async (req: Request, res: Response) => {
     try {
       const { userId, userName, point } = req.body;
+      console.log({ userId, userName, point });
       if (userId === "" || userName === "" || point === "") {
         return res.status(400).json({
           code: 2,
@@ -41,7 +44,7 @@ userRouter
       });
     }
   })
-  .put("/user:id", async (req: Request, res: Response) => {
+  .put("/user/:id", async (req: Request, res: Response) => {
     try {
       if (!req.body) {
         return res.status(400).json({

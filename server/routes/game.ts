@@ -1,13 +1,15 @@
 import express, { Request, Response } from "express";
-import { Game } from "../models/game.js";
+import { Game, GameReqModel } from "../models/game.js";
+import { UserGameLog } from "../models/userGameLog.js";
 
 export const gameRouter = express.Router();
 gameRouter
   .get("/game", async (req: Request, res: Response) => {
     try {
-      const { page = 0 } = req.params;
+      const { page = 1 } = req.params;
 
       const game = await Game.find()
+        .populate("userGameLog")
         .limit(20)
         .skip(Number(page) * 20);
       res.status(200).json(game);
@@ -20,22 +22,32 @@ gameRouter
   })
   .post("/game", async (req: Request, res: Response) => {
     try {
-      const { userId, userName, point } = req.body;
-      if (userId === "" || userName === "" || point === "") {
+      const { blue, red } = req.body;
+      if (blue.length === 0 || red.length === 0) {
         return res.status(400).json({
           code: 2,
           error: "EMPTY REQUEST PARAMS",
         });
       }
 
-      let user = new Game({
-        blue: req.body.blue,
-        red: req.body.red,
+      let game = new Game({
+        blue: req.body.blue.map((v: GameReqModel) => v.userId),
+        red: req.body.blue.map((v: GameReqModel) => v.userId),
         mvp: req.body.mvp,
+        win: req.body.win,
       });
 
-      // save
-      await user.save();
+      // game save
+      const result = await game.save();
+      const { _id } = result;
+      const userGameLogList = req.body.blue.map((v: GameReqModel) => {
+        return {
+          ...v,
+          gameId: _id,
+        };
+      });
+      await UserGameLog.insertMany(userGameLogList, { ordered: false });
+
       res.status(200).json({ success: true });
     } catch (error: unknown) {
       res.status(500).json({
@@ -60,6 +72,27 @@ gameRouter
       await Game.updateOne({ _id: gameId }, req.body, {
         useFindAndModify: false,
       });
+      res.status(200).json({ success: true });
+    } catch (error: unknown) {
+      res.status(500).json({
+        code: 1,
+        error: "[SERVER ERROR] PUT USER",
+      });
+    }
+  })
+  .post("/game/mvp", async (req: Request, res: Response) => {
+    try {
+      const { userId, teamId, gameId } = req.body;
+      if (!userId || !teamId || !gameId) {
+        return res.status(400).json({
+          message: "Data is empty!",
+        });
+      }
+
+      const userGameLog = await UserGameLog.find({ userId, teamId, gameId });
+      userGameLog[0].mvp = true;
+      userGameLog[0].save();
+
       res.status(200).json({ success: true });
     } catch (error: unknown) {
       res.status(500).json({

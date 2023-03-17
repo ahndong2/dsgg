@@ -46,9 +46,9 @@ mongoose
 
 // app.use( express.static( path.join(__dirname, 'build') ) );
 
-app.get("/", function (request, response) {
-  response.sendFile(path.join(__dirname, "build/index.html"));
-});
-app.get("*", function (request, response) {
-  response.sendFile(path.join(__dirname, "build/index.html"));
-});
+// app.get("/", function (request, response) {
+//   response.sendFile(path.join(__dirname, "build/index.html"));
+// });
+// app.get("*", function (request, response) {
+//   response.sendFile(path.join(__dirname, "build/index.html"));
+// });
