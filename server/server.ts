@@ -16,7 +16,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.use("/api/user", userRouter);
+app.use("/api", userRouter);
 app.listen(port);
 
 // CONNECT TO MONGODB SERVER
