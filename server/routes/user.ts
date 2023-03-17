@@ -50,8 +50,11 @@ userRouter
       }
 
       // update
-      const userId = req.params.id;
-      await User.findByIdAndUpdate(userId, req.body, {
+      const id = req.params.id;
+      // await User.findByIdAndUpdate(id, req.body, {
+      //   useFindAndModify: false,
+      // });
+      await User.updateOne({ _id: id }, req.body, {
         useFindAndModify: false,
       });
       res.status(200).json({ success: true });

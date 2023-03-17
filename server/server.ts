@@ -4,6 +4,10 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 
 import { userRouter } from "./routes/user.js";
+import { teamRouter } from "./routes/team.js";
+import { gameRouter } from "./routes/game.js";
+import { userGameLog } from "./routes/userGameLog.js";
+
 const __dirname = path.resolve();
 
 const app: Express = express();
@@ -16,7 +20,12 @@ app.use(
 );
 app.use(bodyParser.json());
 
+// APP Route 연결
 app.use("/api", userRouter);
+app.use("/api", teamRouter);
+app.use("/api", gameRouter);
+app.use("/api", userGameLog);
+
 app.listen(port);
 
 // CONNECT TO MONGODB SERVER

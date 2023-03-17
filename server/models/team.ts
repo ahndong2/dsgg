@@ -1,17 +1,18 @@
-import { ObjectId } from "mongodb";
 import { Schema, model, Model } from "mongoose";
 
 export interface DBTeam {
-  members1: Array<ObjectId>;
-  members2: Array<ObjectId>;
+  members1: Array<Schema.Types.ObjectId>;
+  members2: Array<Schema.Types.ObjectId>;
+  mvp: Schema.Types.ObjectId;
   createdDate: Date;
   modifiedDate: Date;
 }
 interface DBTeamModel extends Model<DBTeam> {}
 // 스키마 객체 생성
 const TeamSchema = new Schema<DBTeam>({
-  members1: { type: [ObjectId] },
-  members2: { type: [ObjectId] },
+  members1: [{ type: [Schema.Types.ObjectId], ref: "User" }],
+  members2: [{ type: [Schema.Types.ObjectId], ref: "User" }],
+  mvp: { type: Schema.Types.ObjectId, ref: "User" },
   createdDate: {
     type: Date,
     default: Date.now, // 현재 날짜를 기본값으로 지정

@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
 import { Team } from "../models/team.js";
 
-export const userRouter = express.Router();
-userRouter
+export const teamRouter = express.Router();
+teamRouter
   .get("/team", async (req: Request, res: Response) => {
     try {
       const team = await Team.find().limit(1);
