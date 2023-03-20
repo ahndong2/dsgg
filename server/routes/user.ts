@@ -5,7 +5,7 @@ export const userRouter = express.Router();
 userRouter
   .get("/user", async (req: Request, res: Response) => {
     try {
-      const { userId } = req.params;
+      const { userId } = req.query;
       const filter = userId ? { userId: userId } : {};
 
       const user = await User.find(filter);

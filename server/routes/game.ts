@@ -2,18 +2,34 @@ import express, { Request, Response } from "express";
 import { Game, GameReqModel } from "../models/game.js";
 import { UserGameLog } from "../models/userGameLog.js";
 
+const getMember = (data: GameReqModel[]) => {
+  return Promise.all(
+    data.map(async (v: GameReqModel) => {
+      const userGameLog = new UserGameLog({
+        ...v,
+      });
+      const userGameLogRow = await userGameLog.save();
+
+      return userGameLogRow._id;
+    })
+  );
+};
+
 export const gameRouter = express.Router();
 gameRouter
   .get("/game", async (req: Request, res: Response) => {
     try {
-      const { page = 1 } = req.params;
-
+      const { page } = req.query;
+      const limit = 20;
+      console.log(limit, page, (Number(page) - 1) * limit);
       const game = await Game.find()
-        .populate("userGameLog")
-        .limit(20)
-        .skip(Number(page) * 20);
+        .populate(["blue", "red", "mvp"])
+        .skip((Number(page ? page : 1) - 1) * limit)
+        .limit(limit);
+
       res.status(200).json(game);
     } catch (error: unknown) {
+      console.log(error);
       res.status(500).json({
         code: 1,
         error: "[SERVER ERROR] GET GAME",
@@ -22,7 +38,7 @@ gameRouter
   })
   .post("/game", async (req: Request, res: Response) => {
     try {
-      const { blue, red } = req.body;
+      const { blue, red, mvp, win } = req.body;
       if (blue.length === 0 || red.length === 0) {
         return res.status(400).json({
           code: 2,
@@ -30,23 +46,17 @@ gameRouter
         });
       }
 
-      let game = new Game({
-        blue: req.body.blue.map((v: GameReqModel) => v.userId),
-        red: req.body.blue.map((v: GameReqModel) => v.userId),
-        mvp: req.body.mvp,
-        win: req.body.win,
-      });
-
+      const blueTeam = await getMember(blue);
+      const redTeam = await getMember(red);
+      const gameData = await {
+        blue: blueTeam,
+        red: redTeam,
+        mvp: mvp,
+        win: win ? win : blue[0].win ? "blue" : "red",
+      };
+      let game = await new Game(gameData);
       // game save
-      const result = await game.save();
-      const { _id } = result;
-      const userGameLogList = req.body.blue.map((v: GameReqModel) => {
-        return {
-          ...v,
-          gameId: _id,
-        };
-      });
-      await UserGameLog.insertMany(userGameLogList, { ordered: false });
+      await game.save();
 
       res.status(200).json({ success: true });
     } catch (error: unknown) {

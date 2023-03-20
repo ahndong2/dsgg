@@ -28,7 +28,7 @@ teamRouter
         members1: req.body.members1,
         members2: req.body.members2,
       });
-
+      console.log(team);
       //save
       await team.save();
       res.status(200).json({ success: true });

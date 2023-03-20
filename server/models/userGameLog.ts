@@ -3,7 +3,6 @@ import { Schema, model, Model } from "mongoose";
 export interface DBUserGameLog {
   userId: Schema.Types.ObjectId;
   teamId: Schema.Types.ObjectId;
-  gameId: Schema.Types.ObjectId;
   champion: String;
   position: String;
   kill: Number;
@@ -19,7 +18,6 @@ interface DBUserGameLogModel extends Model<DBUserGameLog> {}
 const UserGameLogSchema = new Schema<DBUserGameLog>({
   userId: { type: Schema.Types.ObjectId, ref: "User" },
   teamId: { type: Schema.Types.ObjectId, ref: "Team" },
-  gameId: { type: Schema.Types.ObjectId, ref: "Game" },
   champion: { type: String },
   position: { type: String },
   kill: { type: Number, default: 0 },

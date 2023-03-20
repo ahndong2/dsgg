@@ -9,13 +9,9 @@ export interface GameReqModel {
   assist: Number;
   win: Boolean;
 }
-interface Teams {
-  members: Array<Schema.Types.ObjectId>;
-  win: Boolean;
-}
 export interface DBGame {
-  blue: Teams;
-  red: Teams;
+  blue: Array<Schema.Types.ObjectId>;
+  red: Array<Schema.Types.ObjectId>;
   win: String;
   mvp: Schema.Types.ObjectId;
   date: Date;
@@ -27,16 +23,8 @@ interface DBGameModel extends Model<DBGame> {}
 const GameSchema = new Schema<DBGame>({
   win: { type: String },
   mvp: { type: Schema.Types.ObjectId, ref: "User" },
-  blue: {
-    camp: { type: String, default: "blue" },
-    members: [{ type: Schema.Types.ObjectId, ref: "Team" }],
-    win: { type: Boolean },
-  },
-  red: {
-    camp: { type: String, default: "red" },
-    members: [{ type: Schema.Types.ObjectId, ref: "Team" }],
-    win: { type: Boolean },
-  },
+  blue: [{ type: Schema.Types.ObjectId, ref: "UserGameLog" }],
+  red: [{ type: Schema.Types.ObjectId, ref: "UserGameLog" }],
   createdDate: {
     type: Date,
     default: Date.now, // 현재 날짜를 기본값으로 지정
