@@ -20,8 +20,18 @@ export const sampleRecords = [
         blue: {
           win: false,
           members: [
-            { name: "이전도", champ: "블라디", kda: [6, 5, 10], rating: 10 },
-            { name: "이전도", champ: "블라디", kda: [6, 5, 10], rating: 10 },
+            {
+              name: "이전도",
+              champ: "블라디미르",
+              kda: [6, 5, 10],
+              rating: 10,
+            },
+            {
+              name: "이전도",
+              champ: "블라디미르",
+              kda: [6, 5, 10],
+              rating: 10,
+            },
             { name: "이전도", champ: "블라디", kda: [6, 5, 10], rating: 10 },
             { name: "이전도", champ: "블라디", kda: [6, 5, 10], rating: 10 },
             { name: "이전도", champ: "블라디", kda: [6, 5, 10], rating: 10 },
