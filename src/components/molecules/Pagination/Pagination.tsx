@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import styles from './Pagination.module.scss';
-import classNames from 'classnames/bind';
+import React, { useEffect, useState } from "react";
+import styles from "./Pagination.module.scss";
+import classNames from "classnames/bind";
+import { ReactComponent as IconArrowRight } from "@/assets/images/icon-arrow-right.svg";
+import { ReactComponent as IconArrowLeft } from "@/assets/images/icon-arrow-left.svg";
 const cx = classNames.bind(styles);
-import { ReactComponent as IconArrowRight } from '@/assets/images/icon-arrow-right.svg';
-import { ReactComponent as IconArrowLeft } from '@/assets/images/icon-arrow-left.svg';
 
 export interface PaginationProps {
-  size?: 'md' | 'lg';
+  size?: "md" | "lg";
   currentPage: number; // 현재 페이지
   itemsPerPage: number; // 한 페이지 List 갯수
   totalItems: number; // 전체 Item 갯수
@@ -17,7 +17,7 @@ export interface PaginationProps {
 
 export const Pagination = (props: PaginationProps) => {
   const {
-    size = 'md',
+    size = "md",
     currentPage = 1,
     itemsPerPage = 20,
     totalItems = 0,
@@ -92,7 +92,8 @@ export const Pagination = (props: PaginationProps) => {
     if (n === totalPage) {
       // 맨뒤
       const data = {
-        startPage: totalPage - (maxSize - 1) > 1 ? totalPage - (maxSize - 1) : 1,
+        startPage:
+          totalPage - (maxSize - 1) > 1 ? totalPage - (maxSize - 1) : 1,
         endPage: totalPage,
       };
       setPage(data);
@@ -127,12 +128,12 @@ export const Pagination = (props: PaginationProps) => {
   }, [totalItems]);
 
   return (
-    <div data-size={size} className={cx('root', className)}>
+    <div data-size={size} className={cx("root", className)}>
       <ul className={styles.list}>
         <li className={cx({ disabled: currentPage === 1 })} hidden>
           <a
             href="#none"
-            className={cx('nav', 'first')}
+            className={cx("nav", "first")}
             onClick={(e) => {
               e.preventDefault();
               if (currentPage === 1) {
@@ -147,7 +148,7 @@ export const Pagination = (props: PaginationProps) => {
         <li className={cx({ disabled: currentPage === 1 })}>
           <a
             href="#none"
-            className={cx('nav', 'prev')}
+            className={cx("nav", "prev")}
             onClick={(e) => {
               e.preventDefault();
               if (currentPage === 1) {
@@ -163,15 +164,20 @@ export const Pagination = (props: PaginationProps) => {
         {getPages}
         <li
           className={cx({
-            disabled: totalItems === 0 || currentPage === Math.ceil(totalItems / itemsPerPage),
+            disabled:
+              totalItems === 0 ||
+              currentPage === Math.ceil(totalItems / itemsPerPage),
           })}
         >
           <a
             href="#none"
-            className={cx('nav', 'next')}
+            className={cx("nav", "next")}
             onClick={(e) => {
               e.preventDefault();
-              if (totalItems === 0 || currentPage === Math.ceil(totalItems / itemsPerPage)) {
+              if (
+                totalItems === 0 ||
+                currentPage === Math.ceil(totalItems / itemsPerPage)
+              ) {
                 return;
               }
               nextPage(currentPage + 1);
@@ -183,16 +189,21 @@ export const Pagination = (props: PaginationProps) => {
         </li>
         <li
           className={cx({
-            disabled: totalItems === 0 || currentPage === Math.ceil(totalItems / itemsPerPage),
+            disabled:
+              totalItems === 0 ||
+              currentPage === Math.ceil(totalItems / itemsPerPage),
           })}
           hidden
         >
           <a
             href="#none"
-            className={cx('nav', 'last')}
+            className={cx("nav", "last")}
             onClick={(e) => {
               e.preventDefault();
-              if (totalItems === 0 || currentPage === Math.ceil(totalItems / itemsPerPage)) {
+              if (
+                totalItems === 0 ||
+                currentPage === Math.ceil(totalItems / itemsPerPage)
+              ) {
                 return;
               }
               nextPage(totalPage);
