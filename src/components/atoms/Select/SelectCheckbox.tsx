@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Button, Checkbox, Empty } from '@/components';
-import { CustomEventTarget } from '@types';
-import { VALIDATION_MESSAGE } from '@/constants';
-import { useStateCallback } from '@/utils';
-import styles from './SelectCheckbox.module.scss';
-import classNames from 'classnames/bind';
+import React, { useEffect, useState, useRef } from "react";
+import { Button, Checkbox, Empty } from "@/components";
+import { CustomEventTarget } from "@types";
+import { useStateCallback } from "@/utils";
+import styles from "./SelectCheckbox.module.scss";
+import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 interface SelectOptionType {
@@ -22,8 +21,8 @@ export interface SelectCheckboxProps {
   name: string;
   disabled?: boolean;
   readOnly?: boolean;
-  size?: 'none' | 'sm' | 'md' | 'lg';
-  placement?: 'top' | 'bottom';
+  size?: "none" | "sm" | "md" | "lg";
+  placement?: "top" | "bottom";
   placeholder?: string;
   value?: string[];
   options?: SelectOptionType[];
@@ -40,10 +39,10 @@ export const SelectCheckbox = (props: SelectCheckboxProps) => {
     options = [],
     disabled,
     readOnly,
-    placeholder = '선택',
+    placeholder = "선택",
     className,
-    size = 'sm',
-    placement = 'bottom',
+    size = "sm",
+    placement = "bottom",
     onChange = () => {},
   } = props;
 
@@ -54,7 +53,9 @@ export const SelectCheckbox = (props: SelectCheckboxProps) => {
     selectMenuItem: [],
     display: false,
   });
-  const [checkedData, setCheckedData] = useStateCallback([] as SelectOptionType[]);
+  const [checkedData, setCheckedData] = useStateCallback(
+    [] as SelectOptionType[]
+  );
 
   const changeDisplay = () => {
     if (!disabled && !readOnly) {
@@ -89,10 +90,10 @@ export const SelectCheckbox = (props: SelectCheckboxProps) => {
     };
 
     if (data.display) {
-      document.addEventListener('click', onClickEvent);
+      document.addEventListener("click", onClickEvent);
     }
     return () => {
-      document.removeEventListener('click', onClickEvent);
+      document.removeEventListener("click", onClickEvent);
     };
   }, [data.display]);
 
@@ -116,7 +117,7 @@ export const SelectCheckbox = (props: SelectCheckboxProps) => {
   }, [options, value]);
   const EmptyEl = (
     <li>
-      <Empty message={VALIDATION_MESSAGE.NO_ITEMS} className={styles.empty} />
+      <Empty className={styles.empty} />
     </li>
   );
   return (
@@ -125,24 +126,29 @@ export const SelectCheckbox = (props: SelectCheckboxProps) => {
       data-size={size}
       data-focus={data.display}
       data-placement={placement}
-      className={cx('root', className)}
+      className={cx("root", className)}
       ref={componentRef}
     >
-      <Button className={cx('select')} onClick={changeDisplay} ref={buttonRef}>
+      <Button className={cx("select")} onClick={changeDisplay} ref={buttonRef}>
         {/* <span className={styles.text}>{checkedData.map((v) => v.label)}</span> */}
         <span className={styles.text}>
           {checkedData.length > 0 ? checkedData[0].label : placeholder}
         </span>
-        {checkedData.length > 1 && <span className={styles.count}>+{checkedData.length - 1}</span>}
+        {checkedData.length > 1 && (
+          <span className={styles.count}>+{checkedData.length - 1}</span>
+        )}
       </Button>
 
-      <div className={cx('dropdown')} style={{ display: data.display ? 'block' : 'none' }}>
-        <ul className={cx('list')}>
+      <div
+        className={cx("dropdown")}
+        style={{ display: data.display ? "block" : "none" }}
+      >
+        <ul className={cx("list")}>
           {options.length === 0 && EmptyEl}
           {options.length > 0 &&
             options.map((option, i) => {
               return (
-                <li key={`li_${i}`} className={cx('item')}>
+                <li key={`li_${i}`} className={cx("item")}>
                   <Checkbox
                     className={styles.checkbox}
                     checked={value?.includes(option.value)}
