@@ -4,6 +4,7 @@ import { useSampleQuery } from "./query/hooks";
 import { useMutateSample } from "./query/mutations";
 
 import { Button, Container } from "@mui/material";
+import champJson from "./assets/newJson.json";
 
 function App() {
   const {
@@ -47,7 +48,23 @@ function App() {
                                 {game[color].members.map((member) => (
                                   <div className={member.mvp ? "mvp" : ""}>
                                     <div>{member.name}</div>
-                                    <div>{member.champ}</div>
+                                    <div>
+                                      <img
+                                        src={require(`./assets/champImage/${
+                                          champJson.find(
+                                            (f) => f.name === member.champ
+                                          )
+                                            ? champJson.find(
+                                                (f) => f.name === member.champ
+                                              )?.img
+                                            : "simba.png" // temporary image
+                                        }`)}
+                                        alt=""
+                                        height="16px"
+                                        width="16px"
+                                      />
+                                      {member.champ}
+                                    </div>
                                     <div>{member.kda.join(" / ")}</div>
                                     <div>{member.rating}</div>
                                   </div>
