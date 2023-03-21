@@ -37,3 +37,11 @@ export interface MutableRefObject<T> {
 export interface RefObject<T> {
   readonly current: T | null;
 }
+
+export interface AppRoutePageUnit {
+  url: string;
+  login?: boolean;
+}
+export interface AppRoutePage {
+  [key: string]: AppRoutePageUnit;
+}
