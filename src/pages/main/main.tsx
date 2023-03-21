@@ -1,7 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { MainLayout } from "@/components";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -14,11 +13,9 @@ const Main = () => {
   }, []);
 
   return (
-    <MainLayout>
-      <main>
-        <div id="container">main</div>
-      </main>
-    </MainLayout>
+    <main>
+      <div id="container">main</div>
+    </main>
   );
 };
 export default Main;

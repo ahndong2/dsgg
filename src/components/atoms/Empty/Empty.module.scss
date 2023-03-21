@@ -1,8 +1,0 @@
-.root {
-  @apply relative
-}
-.useImg {
-  @apply flex flex-col items-center justify-center;
-  .img {@apply mb-4}
-  .text {@apply text-center text-gray-4}
-}

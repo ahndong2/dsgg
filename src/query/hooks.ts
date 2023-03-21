@@ -1,7 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import QUERY_KEYS from "./queryKeys";
+import { sampleRecords, Game } from "./sample";
 
-const sampleQueryFunction = (params: any) => {};
+const record = sampleRecords;
+const sampleQueryFunction = (params: any) =>
+  new Promise<{ date: string; games: Game[] }[]>((resolve) =>
+    setTimeout(() => {
+      return resolve(record);
+    }, 5000)
+  );
 
 export const useSampleQuery = (params: any) =>
   useQuery(

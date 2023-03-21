@@ -1,6 +1,3 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
-import { SelectOptionType } from '@/components';
-
 export interface PropsBase {
   id?: string;
   name?: string;
@@ -20,7 +17,7 @@ export interface CustomEventTarget {
   name?: string;
   label?: string;
   value?: any;
-  checkedList?: [] | SelectOptionType[];
+  checkedList?: [];
   [key: string]: any;
 }
 
@@ -29,7 +26,9 @@ export interface LabelValue {
   value: any;
 }
 
-export type divEventType = React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>;
+export type divEventType =
+  | React.MouseEvent<HTMLDivElement>
+  | React.FocusEvent<HTMLDivElement>;
 
 export interface MutableRefObject<T> {
   current: T;
