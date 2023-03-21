@@ -1,0 +1,24 @@
+.root {
+  @apply relative mt-auto bg-white shadow-gray-7;
+  box-shadow: inset 0 1px 0 0 var(--tw-shadow-color);
+}
+.inner {
+  @apply relative flex flex-wrap items-center py-10 mx-auto;
+  $padding: var(--padding);
+  $width: var(--screen-footer);
+  max-width: calc($width + $padding*2);
+  padding: {
+    right: $padding;
+    left: $padding;
+  }
+}
+.ci {
+  @apply h-6 mr-6;
+  img {@apply h-full}
+}
+.address {
+  @apply not-italic text-caption text-black/30 tracking-tight;
+}
+.links {
+  @apply ml-auto text-body-4 space-x-7 whitespace-nowrap;
+}

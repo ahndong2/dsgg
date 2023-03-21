@@ -1,0 +1,38 @@
+.root {
+  @apply relative inline-block align-middle rounded-full cursor-pointer;
+  &::before {
+    @apply content-[''] absolute bg-white rounded-full transition-all;
+  }
+  &[data-variant="alarm"] {
+    @apply w-10 h-6;
+    &::before {@apply top-1 w-4 h-4}
+    &[data-checked=false] {
+      @apply bg-gray-3;
+      &::before {@apply left-1}
+    }
+    &[data-checked=true] {
+      @apply bg-yellow-positive;
+      &::before {left: calc(100% - 20px)}
+    }
+  }
+  &[data-variant="proxy"] {
+    @apply min-w-[60px] h-8;
+    &::before {@apply top-1 w-6 h-6}
+    &[data-checked=false] {
+      @apply bg-gray-3;
+      &::before {@apply left-1}
+      .label {@apply mr-2 ml-8}
+    }
+    &[data-checked=true] {
+      @apply bg-gray-2;
+      &::before {left: calc(100% - 28px)}
+      .label {@apply mr-8 ml-2}
+    }
+  }
+}
+.input {
+  @apply absolute w-0 h-0 opacity-0;
+}
+.label {
+  @apply block text-body-4 leading-8 text-white transition-all;
+}

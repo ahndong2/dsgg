@@ -1,0 +1,53 @@
+.root {
+  @apply relative;
+  &::after {@apply content-[''] block clear-both}
+}
+.select {
+  @apply block w-full pr-7 pl-3 text-left;
+  // variant
+  .root[data-variant="default"] & {@apply text-gray-2 bg-white border-gray-7}
+  .root[data-variant="default"][data-focus="true"] & {@apply border-yellow-positive}
+  .root[data-variant="default"][data-error="true"] & {@apply border-red-negative}
+  .root[data-readonly="true"] & {@apply text-gray-3 bg-gray-8 cursor-default}
+  .root[data-disabled="true"] & {@apply text-gray-5 bg-gray-8 cursor-default}
+  &::after {
+    @apply content-[''] absolute top-0 bottom-0 right-3 m-auto w-0 h-0 border-[5px] border-b-0 border-transparent border-t-current;
+    .root[data-focus="true"] & {@apply rotate-180}
+  }
+  .text {@apply block overflow-hidden whitespace-nowrap}
+}
+.dropdown {
+  @apply absolute z-10 left-0 min-w-full;
+  $gap: 8px;
+  .root[data-placement="bottom"] & {top: calc(100% + $gap)}
+  .root[data-placement="top"] & {bottom: calc(100% + $gap)}
+}
+.list {
+  @apply relative overflow-x-hidden overflow-y-auto bg-white border border-gray-7 rounded-base;
+  .root[data-size="md"] & {max-height: 270px;}
+  .root[data-size="lg"] & {max-height: 270px;}
+  .root[data-size="xl"] & {max-height: 300px;}
+}
+.option {
+  @apply block w-full px-3 text-left text-gray-2 rounded-none disabled:text-gray-5 disabled:bg-gray-8;
+  .item[data-selected="true"] & {@apply bg-yellow-positive/5}
+  .text {@apply whitespace-nowrap}
+}
+.empty {
+  @apply flex items-center w-full px-3 text-left text-gray-5 bg-gray-8
+}
+
+// size
+.select,.option,.empty {
+  .root[data-size="md"] & {@apply h-10 text-body-4}
+  .root[data-size="lg"] & {@apply h-12 text-body-4}
+  .root[data-size="xl"] & {@apply h-15 text-body-3}
+}
+
+// etc
+.message {
+  @apply pl-3 flex items-start mt-1 text-body-4 leading-6;
+  & + & {@apply mt-2}
+  .icon {@apply flex-none}
+  .text {@apply pl-1}
+}

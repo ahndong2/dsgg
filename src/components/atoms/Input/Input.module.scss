@@ -1,0 +1,63 @@
+$md: 40px;
+$lg: 48px;
+$xl: 60px;
+
+.root {
+  @apply relative;
+  &::after {@apply content-[''] block clear-both}
+  :global {
+    .button {@apply absolute top-0 right-0 text-gray-2 disabled:text-gray-5}
+  }
+  &[data-size="md"] {
+    :global {
+      .button {width: $md; height: $md;}
+      .icon {width: 18px; height: 18px;}
+    }
+  }
+  &[data-size="lg"] {
+    :global {
+      .button {width: $lg; height: $lg;}
+      .icon {width: 20px; height: 20px;}
+    }
+  }
+  &[data-size="xl"] {
+    :global {
+      .button {width: $lg; height: $xl;}
+      .icon {width: 20px; height: 20px;}
+    }
+  }
+}
+.input {
+  @apply block w-full px-3 bg-transparent placeholder-gray-5 outline-none;
+  // type
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {@apply appearance-none}
+  &[type=number] {-moz-appearance: textfield;}
+  // variant
+  .root[data-variant="default"] & {
+    @apply text-gray-2 bg-white border border-gray-7 rounded-base;
+    @apply focus:border-yellow-positive read-only:bg-gray-8 disabled:text-gray-5 disabled:bg-gray-8;
+  }
+  .root[data-variant="default"][data-error="true"] & {@apply border-red-negative}
+  // size
+  .root[data-size="md"] & {@apply h-10 text-body-4}
+  .root[data-size="lg"] & {@apply h-12 text-body-4}
+  .root[data-size="xl"] & {@apply h-15 text-body-3}
+  // align
+  .root[data-align="center"] & {@apply text-center}
+}
+
+// etc
+.message {
+  @apply pl-3 flex items-start mt-1 text-body-4 leading-6;
+  & + & {@apply mt-2}
+  .icon {@apply flex-none}
+  .text {@apply pl-1}
+}
+.count {
+  @apply float-right pr-3 mt-1 text-caption leading-6 text-gray-5;
+}
+.clear {
+  @apply absolute top-0 right-0;
+  svg {@apply p-0.5 text-white bg-gray-6 rounded-full}
+}

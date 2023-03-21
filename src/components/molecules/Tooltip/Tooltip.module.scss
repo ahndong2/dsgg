@@ -1,0 +1,51 @@
+.root {
+  @apply relative inline-block align-middle;
+}
+.container {
+  @apply absolute z-10 bg-gray-0/85 text-white rounded;
+  // placement
+  $gap: 14px;
+  [data-placement^="top"] & {bottom: calc(100% + $gap);}
+  [data-placement^="bottom"] & {top: calc(100% + $gap);}
+  [data-placement="top"] &,
+  [data-placement="bottom"] & {left: 50%; transform: translateX(-50%);}
+  [data-placement="top-start"] &,
+  [data-placement="bottom-start"] & {left: 0;}
+  [data-placement="top-end"] &,
+  [data-placement="bottom-end"] & {right: 0;}
+  [data-placement^="left"] & {right: calc(100% + $gap);}
+  [data-placement^="right"] & {left: calc(100% + $gap);}
+  [data-placement="left"] &,
+  [data-placement="right"] & {top:50%; transform: translateY(-50%);}
+  [data-placement="left-start"] &,
+  [data-placement="right-start"] & {top: 0;}
+  [data-placement="left-end"] &,
+  [data-placement="right-end"] & {bottom: 0;}
+  &::after {
+    $margin: 14px;
+    @apply content-[''] absolute w-0 h-0 border-transparent;
+    [data-placement^="top"] &,
+    [data-placement^="bottom"] & {border-width: 6px 5px;}
+    [data-placement^="top"] & {@apply top-full border-b-0 border-t-gray-0/85}
+    [data-placement^="bottom"] & {@apply bottom-full border-t-0 border-b-gray-0/85}
+    [data-placement="top"] &,
+    [data-placement="bottom"] & {left: 50%; transform: translateX(-50%);}
+    [data-placement="top-start"] &,
+    [data-placement="bottom-start"] & {left: $margin;}
+    [data-placement="top-end"] &,
+    [data-placement="bottom-end"] & {right: $margin;}
+    [data-placement^="left"] &,
+    [data-placement^="right"] & {border-width: 5px 6px;}
+    [data-placement^="left"] & {@apply left-full border-r-0 border-l-gray-0/85}
+    [data-placement^="right"] & {@apply right-full border-l-0 border-r-gray-0/85}
+    [data-placement="left"] &,
+    [data-placement="right"] & {top: 50%; transform: translateY(-50%);}
+    [data-placement="left-start"] &,
+    [data-placement="right-start"] & {top: $margin;}
+    [data-placement="left-end"] &,
+    [data-placement="right-end"] & {bottom: $margin;}
+  }
+}
+.content {
+  @apply w-[200px] px-3 py-2 text-body-4 leading-6 keep-all;
+}
