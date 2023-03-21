@@ -3,8 +3,9 @@ import { AppRouter } from "./routes";
 import { useSampleQuery } from "./query/hooks";
 import { useMutateSample } from "./query/mutations";
 
-import { Button, Container } from "@mui/material";
+import { Button, Container, SearchInput } from "@mui/material";
 import champJson from "./assets/newJson.json";
+import { useState } from "react";
 
 function App() {
   const {
@@ -19,10 +20,12 @@ function App() {
     onMutate: () => {},
   });
 
+  const [champion, setChampion] = useState("");
   return (
     <div className="App">
       <div className="wrapper">
         <Container maxWidth="lg">
+          <SearchInput id="champion" value={champion} />
           <Button variant="contained">전적 입력</Button>
           <div className="score-board-wrapper">
             {isLoading ? (
