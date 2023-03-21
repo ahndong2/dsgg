@@ -1,5 +1,4 @@
 import { PropsBase } from "@types";
-import { VALIDATION_MESSAGE } from "@/constants";
 import { ReactComponent as NoData } from "@/assets/images/no-data.svg";
 import styles from "./Empty.module.scss";
 import classNames from "classnames/bind";
