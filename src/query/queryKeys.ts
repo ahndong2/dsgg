@@ -2,8 +2,9 @@ const generateKeyName = (value: string) => {
   return ["DSGG", value];
 };
 
-const QUERY_KEYS = {
+export const QUERY_KEYS = {
   SAMPLE_QUERY: generateKeyName("sample-query"),
+  CHAMPION_LIST: generateKeyName("champion-list"),
 };
 
 export default QUERY_KEYS;

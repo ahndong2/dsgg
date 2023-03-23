@@ -14,13 +14,14 @@ export interface DBGame {
   red: Array<Schema.Types.ObjectId>;
   win: String;
   mvp: Schema.Types.ObjectId;
-  date: Date;
+  date: String;
   createdDate: Date;
   modifiedDate: Date;
 }
 interface DBGameModel extends Model<DBGame> {}
 // 스키마 객체 생성
 const GameSchema = new Schema<DBGame>({
+  date: { type: String },
   win: { type: String },
   mvp: { type: Schema.Types.ObjectId, ref: "User" },
   blue: [{ type: Schema.Types.ObjectId, ref: "UserGameLog" }],

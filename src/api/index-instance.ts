@@ -54,4 +54,4 @@ const createInstance = (url: string, options: Options): AxiosInstance => {
 };
 const API = createInstance(`${APP_BASE_URI}`, { headers: headers() });
 
-export { API, AxiosResponse };
+export { API };

@@ -1,5 +1,6 @@
 import { UserParam } from "@/@types";
-import { API, AxiosResponse } from "@/api/index-instance";
+import { API } from "@/api/index-instance";
+import { AxiosResponse } from "axios";
 
 // User 조회
 export const getUser = (params: UserParam): Promise<AxiosResponse> =>

@@ -1,5 +1,6 @@
 import { GameParam, GameData, MVPParam } from "@/@types";
-import { API, AxiosResponse } from "@/api/index-instance";
+import { API } from "@/api/index-instance";
+import { AxiosResponse } from "axios";
 
 // Game 조회
 export const getGame = (params: GameParam): Promise<AxiosResponse> =>

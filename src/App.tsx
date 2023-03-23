@@ -2,8 +2,8 @@ import "./App.css";
 import { AppRouter } from "./routes";
 import { useSampleQuery } from "./query/hooks";
 import { useMutateSample } from "./query/mutations";
-
-import { Button, Container, SearchInput } from "@mui/material";
+import { SearchInput, TextInput } from "@/components";
+import { Button, Container } from "@mui/material";
 import champJson from "./assets/newJson.json";
 import { useState } from "react";
 
@@ -20,12 +20,25 @@ function App() {
     onMutate: () => {},
   });
 
-  const [champion, setChampion] = useState("");
+  const [data, setData] = useState({ text: "", search: "" });
+  const changeInfoData = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    console.log(value);
+    setData({
+      ...data,
+      [id]: value,
+    });
+  };
   return (
     <div className="App">
       <div className="wrapper">
         <Container maxWidth="lg">
-          <SearchInput id="champion" value={champion} />
+          <TextInput id="text" value={data.text} onChange={changeInfoData} />
+          <SearchInput
+            id="search"
+            value={data.search}
+            onChange={changeInfoData}
+          />
           <Button variant="contained">전적 입력</Button>
           <div className="score-board-wrapper">
             {isLoading ? (

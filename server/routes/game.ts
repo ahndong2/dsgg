@@ -38,7 +38,7 @@ gameRouter
   })
   .post("/game", async (req: Request, res: Response) => {
     try {
-      const { blue, red, mvp, win } = req.body;
+      const { date, blue, red, mvp, win } = req.body;
       if (blue.length === 0 || red.length === 0) {
         return res.status(400).json({
           code: 2,
@@ -49,6 +49,7 @@ gameRouter
       const blueTeam = await getMember(blue);
       const redTeam = await getMember(red);
       const gameData = await {
+        date: date,
         blue: blueTeam,
         red: redTeam,
         mvp: mvp,

@@ -1,13 +1,13 @@
 export interface UserParam {
-  userId: String;
-  userName?: String;
-  point?: Number;
+  userId: string;
+  userName?: string;
+  point?: number;
 }
 export interface USER {
-  _id?: String;
-  userId: String;
-  userName: String;
-  point: Number;
+  _id?: string;
+  userId: string;
+  userName: string;
+  point: number;
 }
 
 export interface Team {
@@ -17,29 +17,38 @@ export interface Team {
 }
 
 export interface GameParam {
-  page: Number;
+  page: number;
 }
 
 export interface GameUnitData {
-  _id?: String;
-  userId: String;
-  teamId: String;
-  champion: String;
-  kill: Number;
-  death: Number;
-  assist: Number;
-  win: Boolean;
+  _id?: string;
+  userId: string;
+  teamId: string;
+  champion: string;
+  kill: number;
+  death: number;
+  assist: number;
+  win: boolean;
 }
 
 export interface GameData {
   blue: GameUnitData[];
   red: GameUnitData[];
-  win?: String;
-  mvp?: String;
+  win?: string;
+  mvp?: string;
 }
 
 export interface MVPParam {
-  userId: String;
-  teamId: String;
-  gameId: String;
+  userId: string;
+  teamId: string;
+  gameId: string;
+}
+
+export interface Champion {
+  id: number;
+  nameEn: string;
+  name: string;
+  img: string;
+  title: string;
+  tag: string[];
 }

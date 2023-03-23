@@ -1,0 +1,1274 @@
+[
+  {
+    "id": 0,
+    "nameEn": "Aatrox",
+    "name": "아트록스",
+    "img": "Aatrox.png",
+    "title": "다르킨의 검",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 1,
+    "nameEn": "Ahri",
+    "name": "아리",
+    "img": "Ahri.png",
+    "title": "구미호",
+    "tags": ["Mage", "Assassin"]
+  },
+  {
+    "id": 2,
+    "nameEn": "Akali",
+    "name": "아칼리",
+    "img": "Akali.png",
+    "title": "섬기는 이 없는 암살자",
+    "tags": ["Assassin"]
+  },
+  {
+    "id": 3,
+    "nameEn": "Akshan",
+    "name": "아크샨",
+    "img": "Akshan.png",
+    "title": "떠도는 감시자",
+    "tags": ["Marksman", "Assassin"]
+  },
+  {
+    "id": 4,
+    "nameEn": "Alistar",
+    "name": "알리스타",
+    "img": "Alistar.png",
+    "title": "미노타우로스",
+    "tags": ["Tank", "Support"]
+  },
+  {
+    "id": 5,
+    "nameEn": "Amumu",
+    "name": "아무무",
+    "img": "Amumu.png",
+    "title": "슬픈 미라",
+    "tags": ["Tank", "Mage"]
+  },
+  {
+    "id": 6,
+    "nameEn": "Anivia",
+    "name": "애니비아",
+    "img": "Anivia.png",
+    "title": "얼음불사조",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 7,
+    "nameEn": "Annie",
+    "name": "애니",
+    "img": "Annie.png",
+    "title": "어둠의 아이",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 8,
+    "nameEn": "Aphelios",
+    "name": "아펠리오스",
+    "img": "Aphelios.png",
+    "title": "신념의 무기",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 9,
+    "nameEn": "Ashe",
+    "name": "애쉬",
+    "img": "Ashe.png",
+    "title": "서리 궁수",
+    "tags": ["Marksman", "Support"]
+  },
+  {
+    "id": 10,
+    "nameEn": "AurelionSol",
+    "name": "아우렐리온 솔",
+    "img": "AurelionSol.png",
+    "title": "별의 창조자",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 11,
+    "nameEn": "Azir",
+    "name": "아지르",
+    "img": "Azir.png",
+    "title": "사막의 황제",
+    "tags": ["Mage", "Marksman"]
+  },
+  {
+    "id": 12,
+    "nameEn": "Bard",
+    "name": "바드",
+    "img": "Bard.png",
+    "title": "영겁의 수호자",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 13,
+    "nameEn": "Blitzcrank",
+    "name": "블리츠크랭크",
+    "img": "Blitzcrank.png",
+    "title": "거대 증기 골렘",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 14,
+    "nameEn": "Brand",
+    "name": "브랜드",
+    "img": "Brand.png",
+    "title": "타오르는 복수",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 15,
+    "nameEn": "Braum",
+    "name": "브라움",
+    "img": "Braum.png",
+    "title": "프렐요드의 심장",
+    "tags": ["Support", "Tank"]
+  },
+  {
+    "id": 16,
+    "nameEn": "Caitlyn",
+    "name": "케이틀린",
+    "img": "Caitlyn.png",
+    "title": "필트오버의 보안관",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 17,
+    "nameEn": "Camille",
+    "name": "카밀",
+    "img": "Camille.png",
+    "title": "강철의 그림자",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 18,
+    "nameEn": "Cassiopeia",
+    "name": "카시오페아",
+    "img": "Cassiopeia.png",
+    "title": "독사의 포옹",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 19,
+    "nameEn": "Chogath",
+    "name": "초가스",
+    "img": "Chogath.png",
+    "title": "공허의 공포",
+    "tags": ["Tank", "Mage"]
+  },
+  {
+    "id": 20,
+    "nameEn": "Corki",
+    "name": "코르키",
+    "img": "Corki.png",
+    "title": "대담한 폭격수",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 21,
+    "nameEn": "Darius",
+    "name": "다리우스",
+    "img": "Darius.png",
+    "title": "녹서스의 실력자",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 22,
+    "nameEn": "Diana",
+    "name": "다이애나",
+    "img": "Diana.png",
+    "title": "차가운 달의 분노",
+    "tags": ["Fighter", "Mage"]
+  },
+  {
+    "id": 23,
+    "nameEn": "Draven",
+    "name": "드레이븐",
+    "img": "Draven.png",
+    "title": "화려한 처형자",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 24,
+    "nameEn": "DrMundo",
+    "name": "문도 박사",
+    "img": "DrMundo.png",
+    "title": "자운의 광인",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 25,
+    "nameEn": "Ekko",
+    "name": "에코",
+    "img": "Ekko.png",
+    "title": "시간을 달리는 소년",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 26,
+    "nameEn": "Elise",
+    "name": "엘리스",
+    "img": "Elise.png",
+    "title": "거미 여왕",
+    "tags": ["Mage", "Fighter"]
+  },
+  {
+    "id": 27,
+    "nameEn": "Evelynn",
+    "name": "이블린",
+    "img": "Evelynn.png",
+    "title": "고통스런 포옹",
+    "tags": ["Assassin", "Mage"]
+  },
+  {
+    "id": 28,
+    "nameEn": "Ezreal",
+    "name": "이즈리얼",
+    "img": "Ezreal.png",
+    "title": "무모한 탐험가",
+    "tags": ["Marksman", "Mage"]
+  },
+  {
+    "id": 29,
+    "nameEn": "Fiddlesticks",
+    "name": "피들스틱",
+    "img": "Fiddlesticks.png",
+    "title": "오래된 공포",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 30,
+    "nameEn": "Fiora",
+    "name": "피오라",
+    "img": "Fiora.png",
+    "title": "결투의 대가",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 31,
+    "nameEn": "Fizz",
+    "name": "피즈",
+    "img": "Fizz.png",
+    "title": "대양의 말썽꾸러기",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 32,
+    "nameEn": "Galio",
+    "name": "갈리오",
+    "img": "Galio.png",
+    "title": "위대한 석상",
+    "tags": ["Tank", "Mage"]
+  },
+  {
+    "id": 33,
+    "nameEn": "Gangplank",
+    "name": "갱플랭크",
+    "img": "Gangplank.png",
+    "title": "바다의 무법자",
+    "tags": ["Fighter"]
+  },
+  {
+    "id": 34,
+    "nameEn": "Garen",
+    "name": "가렌",
+    "img": "Garen.png",
+    "title": "데마시아의 힘",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 35,
+    "nameEn": "Gnar",
+    "name": "나르",
+    "img": "Gnar.png",
+    "title": "잃어버린 고리",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 36,
+    "nameEn": "Gragas",
+    "name": "그라가스",
+    "img": "Gragas.png",
+    "title": "술취한 난동꾼",
+    "tags": ["Fighter", "Mage"]
+  },
+  {
+    "id": 37,
+    "nameEn": "Graves",
+    "name": "그레이브즈",
+    "img": "Graves.png",
+    "title": "무법자",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 38,
+    "nameEn": "Gwen",
+    "name": "그웬",
+    "img": "Gwen.png",
+    "title": "신성한 재봉사",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 39,
+    "nameEn": "Hecarim",
+    "name": "헤카림",
+    "img": "Hecarim.png",
+    "title": "전쟁의 전조",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 40,
+    "nameEn": "Heimerdinger",
+    "name": "하이머딩거",
+    "img": "Heimerdinger.png",
+    "title": "위대한 발명가",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 41,
+    "nameEn": "Illaoi",
+    "name": "일라오이",
+    "img": "Illaoi.png",
+    "title": "크라켄의 여사제",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 42,
+    "nameEn": "Irelia",
+    "name": "이렐리아",
+    "img": "Irelia.png",
+    "title": "칼날 무희",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 43,
+    "nameEn": "Ivern",
+    "name": "아이번",
+    "img": "Ivern.png",
+    "title": "자연의 아버지",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 44,
+    "nameEn": "Janna",
+    "name": "잔나",
+    "img": "Janna.png",
+    "title": "폭풍의 분노",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 45,
+    "nameEn": "JarvanIV",
+    "name": "자르반 4세",
+    "img": "JarvanIV.png",
+    "title": "데마시아의 귀감",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 46,
+    "nameEn": "Jax",
+    "name": "잭스",
+    "img": "Jax.png",
+    "title": "무기의 달인",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 47,
+    "nameEn": "Jayce",
+    "name": "제이스",
+    "img": "Jayce.png",
+    "title": "미래의 수호자",
+    "tags": ["Fighter", "Marksman"]
+  },
+  {
+    "id": 48,
+    "nameEn": "Jhin",
+    "name": "진",
+    "img": "Jhin.png",
+    "title": "잔혹극의 거장",
+    "tags": ["Marksman", "Mage"]
+  },
+  {
+    "id": 49,
+    "nameEn": "Jinx",
+    "name": "징크스",
+    "img": "Jinx.png",
+    "title": "난폭한 말괄량이",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 50,
+    "nameEn": "Kaisa",
+    "name": "카이사",
+    "img": "Kaisa.png",
+    "title": "공허의 딸",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 51,
+    "nameEn": "Kalista",
+    "name": "칼리스타",
+    "img": "Kalista.png",
+    "title": "복수의 화신",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 52,
+    "nameEn": "Karma",
+    "name": "카르마",
+    "img": "Karma.png",
+    "title": "깨우친 자",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 53,
+    "nameEn": "Karthus",
+    "name": "카서스",
+    "img": "Karthus.png",
+    "title": "죽음을 노래하는 자",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 54,
+    "nameEn": "Kassadin",
+    "name": "카사딘",
+    "img": "Kassadin.png",
+    "title": "공허의 방랑자",
+    "tags": ["Assassin", "Mage"]
+  },
+  {
+    "id": 55,
+    "nameEn": "Katarina",
+    "name": "카타리나",
+    "img": "Katarina.png",
+    "title": "사악한 칼날",
+    "tags": ["Assassin", "Mage"]
+  },
+  {
+    "id": 56,
+    "nameEn": "Kayle",
+    "name": "케일",
+    "img": "Kayle.png",
+    "title": "정의로운 자",
+    "tags": ["Fighter", "Support"]
+  },
+  {
+    "id": 57,
+    "nameEn": "Kayn",
+    "name": "케인",
+    "img": "Kayn.png",
+    "title": "그림자 사신",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 58,
+    "nameEn": "Kennen",
+    "name": "케넨",
+    "img": "Kennen.png",
+    "title": "폭풍의 심장",
+    "tags": ["Mage", "Marksman"]
+  },
+  {
+    "id": 59,
+    "nameEn": "Khazix",
+    "name": "카직스",
+    "img": "Khazix.png",
+    "title": "공허의 약탈자",
+    "tags": ["Assassin"]
+  },
+  {
+    "id": 60,
+    "nameEn": "Kindred",
+    "name": "킨드레드",
+    "img": "Kindred.png",
+    "title": "영겁의 사냥꾼",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 61,
+    "nameEn": "Kled",
+    "name": "클레드",
+    "img": "Kled.png",
+    "title": "망나니 기사",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 62,
+    "nameEn": "KogMaw",
+    "name": "코그모",
+    "img": "KogMaw.png",
+    "title": "심연의 아귀",
+    "tags": ["Marksman", "Mage"]
+  },
+  {
+    "id": 63,
+    "nameEn": "Leblanc",
+    "name": "르블랑",
+    "img": "Leblanc.png",
+    "title": "환술사",
+    "tags": ["Assassin", "Mage"]
+  },
+  {
+    "id": 64,
+    "nameEn": "LeeSin",
+    "name": "리 신",
+    "img": "LeeSin.png",
+    "title": "눈먼 수도승",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 65,
+    "nameEn": "Leona",
+    "name": "레오나",
+    "img": "Leona.png",
+    "title": "여명의 빛",
+    "tags": ["Tank", "Support"]
+  },
+  {
+    "id": 66,
+    "nameEn": "Lillia",
+    "name": "릴리아",
+    "img": "Lillia.png",
+    "title": "수줍은 꽃",
+    "tags": ["Fighter", "Mage"]
+  },
+  {
+    "id": 67,
+    "nameEn": "Lissandra",
+    "name": "리산드라",
+    "img": "Lissandra.png",
+    "title": "얼음 마녀",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 68,
+    "nameEn": "Lucian",
+    "name": "루시안",
+    "img": "Lucian.png",
+    "title": "정화의 사도",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 69,
+    "nameEn": "Lulu",
+    "name": "룰루",
+    "img": "Lulu.png",
+    "title": "요정 마법사",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 70,
+    "nameEn": "Lux",
+    "name": "럭스",
+    "img": "Lux.png",
+    "title": "광명의 소녀",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 71,
+    "nameEn": "Malphite",
+    "name": "말파이트",
+    "img": "Malphite.png",
+    "title": "거석의 파편",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 72,
+    "nameEn": "Malzahar",
+    "name": "말자하",
+    "img": "Malzahar.png",
+    "title": "공허의 예언자",
+    "tags": ["Mage", "Assassin"]
+  },
+  {
+    "id": 73,
+    "nameEn": "Maokai",
+    "name": "마오카이",
+    "img": "Maokai.png",
+    "title": "뒤틀린 나무 정령",
+    "tags": ["Tank", "Mage"]
+  },
+  {
+    "id": 74,
+    "nameEn": "MasterYi",
+    "name": "마스터 이",
+    "img": "MasterYi.png",
+    "title": "우주 검사",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 75,
+    "nameEn": "MissFortune",
+    "name": "미스 포츈",
+    "img": "MissFortune.png",
+    "title": "현상금 사냥꾼",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 76,
+    "nameEn": "MonkeyKing",
+    "name": "오공",
+    "img": "MonkeyKing.png",
+    "title": "원숭이 왕",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 77,
+    "nameEn": "Mordekaiser",
+    "name": "모데카이저",
+    "img": "Mordekaiser.png",
+    "title": "강철의 망령",
+    "tags": ["Fighter"]
+  },
+  {
+    "id": 78,
+    "nameEn": "Morgana",
+    "name": "모르가나",
+    "img": "Morgana.png",
+    "title": "타락한 자",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 79,
+    "nameEn": "Nami",
+    "name": "나미",
+    "img": "Nami.png",
+    "title": "파도 소환사",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 80,
+    "nameEn": "Nasus",
+    "name": "나서스",
+    "img": "Nasus.png",
+    "title": "사막의 관리자",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 81,
+    "nameEn": "Nautilus",
+    "name": "노틸러스",
+    "img": "Nautilus.png",
+    "title": "심해의 타이탄",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 82,
+    "nameEn": "Neeko",
+    "name": "니코",
+    "img": "Neeko.png",
+    "title": "알쏭달쏭 카멜레온",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 83,
+    "nameEn": "Nidalee",
+    "name": "니달리",
+    "img": "Nidalee.png",
+    "title": "야성의 사냥꾼",
+    "tags": ["Assassin", "Mage"]
+  },
+  {
+    "id": 84,
+    "nameEn": "Nocturne",
+    "name": "녹턴",
+    "img": "Nocturne.png",
+    "title": "영원한 악몽",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 85,
+    "nameEn": "Nunu",
+    "name": "누누와 윌럼프",
+    "img": "Nunu.png",
+    "title": "소년과 설인",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 86,
+    "nameEn": "Olaf",
+    "name": "올라프",
+    "img": "Olaf.png",
+    "title": "광전사",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 87,
+    "nameEn": "Orianna",
+    "name": "오리아나",
+    "img": "Orianna.png",
+    "title": "시계태엽 소녀",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 88,
+    "nameEn": "Ornn",
+    "name": "오른",
+    "img": "Ornn.png",
+    "title": "거산의 화염",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 89,
+    "nameEn": "Pantheon",
+    "name": "판테온",
+    "img": "Pantheon.png",
+    "title": "불굴의 창",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 90,
+    "nameEn": "Poppy",
+    "name": "뽀삐",
+    "img": "Poppy.png",
+    "title": "망치의 수호자",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 91,
+    "nameEn": "Pyke",
+    "name": "파이크",
+    "img": "Pyke.png",
+    "title": "핏빛 항구의 학살자",
+    "tags": ["Support", "Assassin"]
+  },
+  {
+    "id": 92,
+    "nameEn": "Qiyana",
+    "name": "키아나",
+    "img": "Qiyana.png",
+    "title": "원소의 여왕",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 93,
+    "nameEn": "Quinn",
+    "name": "퀸",
+    "img": "Quinn.png",
+    "title": "데마시아의 날개",
+    "tags": ["Marksman", "Assassin"]
+  },
+  {
+    "id": 94,
+    "nameEn": "Rakan",
+    "name": "라칸",
+    "img": "Rakan.png",
+    "title": "매혹하는 자",
+    "tags": ["Support"]
+  },
+  {
+    "id": 95,
+    "nameEn": "Rammus",
+    "name": "람머스",
+    "img": "Rammus.png",
+    "title": "중무장 아르마딜로",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 96,
+    "nameEn": "RekSai",
+    "name": "렉사이",
+    "img": "RekSai.png",
+    "title": "공허의 복병",
+    "tags": ["Fighter"]
+  },
+  {
+    "id": 97,
+    "nameEn": "Rell",
+    "name": "렐",
+    "img": "Rell.png",
+    "title": "철의 여인",
+    "tags": ["Tank"]
+  },
+  {
+    "id": 98,
+    "nameEn": "Renata",
+    "name": "레나타 글라스크",
+    "img": "Renata.png",
+    "title": "화공 남작",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 99,
+    "nameEn": "Renekton",
+    "name": "레넥톤",
+    "img": "Renekton.png",
+    "title": "사막의 도살자",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 100,
+    "nameEn": "Rengar",
+    "name": "렝가",
+    "img": "Rengar.png",
+    "title": "추적하는 사자",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 101,
+    "nameEn": "Riven",
+    "name": "리븐",
+    "img": "Riven.png",
+    "title": "추방자",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 102,
+    "nameEn": "Rumble",
+    "name": "럼블",
+    "img": "Rumble.png",
+    "title": "기계 악동",
+    "tags": ["Fighter", "Mage"]
+  },
+  {
+    "id": 103,
+    "nameEn": "Ryze",
+    "name": "라이즈",
+    "img": "Ryze.png",
+    "title": "룬 마법사",
+    "tags": ["Mage", "Fighter"]
+  },
+  {
+    "id": 104,
+    "nameEn": "Samira",
+    "name": "사미라",
+    "img": "Samira.png",
+    "title": "사막의 장미",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 105,
+    "nameEn": "Sejuani",
+    "name": "세주아니",
+    "img": "Sejuani.png",
+    "title": "혹한의 분노",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 106,
+    "nameEn": "Senna",
+    "name": "세나",
+    "img": "Senna.png",
+    "title": "구원자",
+    "tags": ["Marksman", "Support"]
+  },
+  {
+    "id": 107,
+    "nameEn": "Seraphine",
+    "name": "세라핀",
+    "img": "Seraphine.png",
+    "title": "노래하는 별",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 108,
+    "nameEn": "Sett",
+    "name": "세트",
+    "img": "Sett.png",
+    "title": "우두머리",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 109,
+    "nameEn": "Shaco",
+    "name": "샤코",
+    "img": "Shaco.png",
+    "title": "악마 어릿광대",
+    "tags": ["Assassin"]
+  },
+  {
+    "id": 110,
+    "nameEn": "Shen",
+    "name": "쉔",
+    "img": "Shen.png",
+    "title": "황혼의 눈",
+    "tags": ["Tank"]
+  },
+  {
+    "id": 111,
+    "nameEn": "Shyvana",
+    "name": "쉬바나",
+    "img": "Shyvana.png",
+    "title": "하프 드래곤",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 112,
+    "nameEn": "Singed",
+    "name": "신지드",
+    "img": "Singed.png",
+    "title": "미친 화학자",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 113,
+    "nameEn": "Sion",
+    "name": "사이온",
+    "img": "Sion.png",
+    "title": "언데드 학살병기",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 114,
+    "nameEn": "Sivir",
+    "name": "시비르",
+    "img": "Sivir.png",
+    "title": "전장의 여제",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 115,
+    "nameEn": "Skarner",
+    "name": "스카너",
+    "img": "Skarner.png",
+    "title": "수정 선봉장",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 116,
+    "nameEn": "Sona",
+    "name": "소나",
+    "img": "Sona.png",
+    "title": "현의 명인",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 117,
+    "nameEn": "Soraka",
+    "name": "소라카",
+    "img": "Soraka.png",
+    "title": "별의 아이",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 118,
+    "nameEn": "Swain",
+    "name": "스웨인",
+    "img": "Swain.png",
+    "title": "녹서스 대장군",
+    "tags": ["Mage", "Fighter"]
+  },
+  {
+    "id": 119,
+    "nameEn": "Sylas",
+    "name": "사일러스",
+    "img": "Sylas.png",
+    "title": "해방된 자",
+    "tags": ["Mage", "Assassin"]
+  },
+  {
+    "id": 120,
+    "nameEn": "Syndra",
+    "name": "신드라",
+    "img": "Syndra.png",
+    "title": "어둠의 여제",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 121,
+    "nameEn": "TahmKench",
+    "name": "탐 켄치",
+    "img": "TahmKench.png",
+    "title": "강의 폭군",
+    "tags": ["Support", "Tank"]
+  },
+  {
+    "id": 122,
+    "nameEn": "Taliyah",
+    "name": "탈리야",
+    "img": "Taliyah.png",
+    "title": "바위술사",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 123,
+    "nameEn": "Talon",
+    "name": "탈론",
+    "img": "Talon.png",
+    "title": "검의 그림자",
+    "tags": ["Assassin"]
+  },
+  {
+    "id": 124,
+    "nameEn": "Taric",
+    "name": "타릭",
+    "img": "Taric.png",
+    "title": "발로란의 방패",
+    "tags": ["Support", "Fighter"]
+  },
+  {
+    "id": 125,
+    "nameEn": "Teemo",
+    "name": "티모",
+    "img": "Teemo.png",
+    "title": "날쌘 정찰병",
+    "tags": ["Marksman", "Assassin"]
+  },
+  {
+    "id": 126,
+    "nameEn": "Thresh",
+    "name": "쓰레쉬",
+    "img": "Thresh.png",
+    "title": "지옥의 간수",
+    "tags": ["Support", "Fighter"]
+  },
+  {
+    "id": 127,
+    "nameEn": "Tristana",
+    "name": "트리스타나",
+    "img": "Tristana.png",
+    "title": "요들 사수",
+    "tags": ["Marksman", "Assassin"]
+  },
+  {
+    "id": 128,
+    "nameEn": "Trundle",
+    "name": "트런들",
+    "img": "Trundle.png",
+    "title": "트롤 왕",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 129,
+    "nameEn": "Tryndamere",
+    "name": "트린다미어",
+    "img": "Tryndamere.png",
+    "title": "야만전사 왕",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 130,
+    "nameEn": "TwistedFate",
+    "name": "트위스티드 페이트",
+    "img": "TwistedFate.png",
+    "title": "카드의 달인",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 131,
+    "nameEn": "Twitch",
+    "name": "트위치",
+    "img": "Twitch.png",
+    "title": "역병 쥐",
+    "tags": ["Marksman", "Assassin"]
+  },
+  {
+    "id": 132,
+    "nameEn": "Udyr",
+    "name": "우디르",
+    "img": "Udyr.png",
+    "title": "정령 주술사",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 133,
+    "nameEn": "Urgot",
+    "name": "우르곳",
+    "img": "Urgot.png",
+    "title": "살상 병기",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 134,
+    "nameEn": "Varus",
+    "name": "바루스",
+    "img": "Varus.png",
+    "title": "응징의 화살",
+    "tags": ["Marksman", "Mage"]
+  },
+  {
+    "id": 135,
+    "nameEn": "Vayne",
+    "name": "베인",
+    "img": "Vayne.png",
+    "title": "어둠 사냥꾼",
+    "tags": ["Marksman", "Assassin"]
+  },
+  {
+    "id": 136,
+    "nameEn": "Veigar",
+    "name": "베이가",
+    "img": "Veigar.png",
+    "title": "악의 작은 지배자",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 137,
+    "nameEn": "Velkoz",
+    "name": "벨코즈",
+    "img": "Velkoz.png",
+    "title": "공허의 눈",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 138,
+    "nameEn": "Vex",
+    "name": "벡스",
+    "img": "Vex.png",
+    "title": "우울주의자",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 139,
+    "nameEn": "Vi",
+    "name": "바이",
+    "img": "Vi.png",
+    "title": "필트오버의 집행자",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 140,
+    "nameEn": "Viego",
+    "name": "비에고",
+    "img": "Viego.png",
+    "title": "몰락한 왕",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 141,
+    "nameEn": "Viktor",
+    "name": "빅토르",
+    "img": "Viktor.png",
+    "title": "기계화의 전령관",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 142,
+    "nameEn": "Vladimir",
+    "name": "블라디미르",
+    "img": "Vladimir.png",
+    "title": "진홍빛 사신",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 143,
+    "nameEn": "Volibear",
+    "name": "볼리베어",
+    "img": "Volibear.png",
+    "title": "무자비한 폭풍",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 144,
+    "nameEn": "Warwick",
+    "name": "워윅",
+    "img": "Warwick.png",
+    "title": "자운의 고삐 풀린 분노",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 145,
+    "nameEn": "Xayah",
+    "name": "자야",
+    "img": "Xayah.png",
+    "title": "저항하는 자",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 146,
+    "nameEn": "Xerath",
+    "name": "제라스",
+    "img": "Xerath.png",
+    "title": "초월한 마법사",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 147,
+    "nameEn": "XinZhao",
+    "name": "신 짜오",
+    "img": "XinZhao.png",
+    "title": "데마시아의 호위무사",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 148,
+    "nameEn": "Yasuo",
+    "name": "야스오",
+    "img": "Yasuo.png",
+    "title": "용서받지 못한 자",
+    "tags": ["Fighter", "Assassin"]
+  },
+  {
+    "id": 149,
+    "nameEn": "Yone",
+    "name": "요네",
+    "img": "Yone.png",
+    "title": "잊히지 못한 자",
+    "tags": ["Assassin", "Fighter"]
+  },
+  {
+    "id": 150,
+    "nameEn": "Yorick",
+    "name": "요릭",
+    "img": "Yorick.png",
+    "title": "영혼의 길잡이",
+    "tags": ["Fighter", "Tank"]
+  },
+  {
+    "id": 151,
+    "nameEn": "Yuumi",
+    "name": "유미",
+    "img": "Yuumi.png",
+    "title": "마법 고양이",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 152,
+    "nameEn": "Zac",
+    "name": "자크",
+    "img": "Zac.png",
+    "title": "비밀 병기",
+    "tags": ["Tank", "Fighter"]
+  },
+  {
+    "id": 153,
+    "nameEn": "Zed",
+    "name": "제드",
+    "img": "Zed.png",
+    "title": "그림자의 주인",
+    "tags": ["Assassin"]
+  },
+  {
+    "id": 154,
+    "nameEn": "Zeri",
+    "name": "제리",
+    "img": "Zeri.png",
+    "title": "자운의 불꽃",
+    "tags": ["Marksman"]
+  },
+  {
+    "id": 155,
+    "nameEn": "Ziggs",
+    "name": "직스",
+    "img": "Ziggs.png",
+    "title": "마법공학 폭파병",
+    "tags": ["Mage"]
+  },
+  {
+    "id": 156,
+    "nameEn": "Zilean",
+    "name": "질리언",
+    "img": "Zilean.png",
+    "title": "시간의 수호자",
+    "tags": ["Support", "Mage"]
+  },
+  {
+    "id": 157,
+    "nameEn": "Zoe",
+    "name": "조이",
+    "img": "Zoe.png",
+    "title": "여명의 성위",
+    "tags": ["Mage", "Support"]
+  },
+  {
+    "id": 158,
+    "nameEn": "Zyra",
+    "name": "자이라",
+    "img": "Zyra.png",
+    "title": "가시 덩굴의 복수",
+    "tags": ["Mage", "Support"]
+  }
+]

@@ -1,5 +1,6 @@
 import { Team } from "@/@types";
-import { API, AxiosResponse } from "@/api/index-instance";
+import { API } from "@/api/index-instance";
+import { AxiosResponse } from "axios";
 
 // Team 조회
 export const getTeam = (params: Team): Promise<AxiosResponse> =>
