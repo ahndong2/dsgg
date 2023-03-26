@@ -13,28 +13,28 @@
 }
 
 .wrapper {
-  background-color: #282c34;
-  min-height: calc(100vh - 20px);
-  font-size: calc(10px + 2vmin);
+  min-height: calc(100vh);
   color: white;
-  padding: 10px;
+  background-color: #282c34;
 }
 
 .score-board-wrapper {
-  margin: 10px 0;
   display: grid;
   grid-template-columns: 1fr 9fr;
-  background-color: white;
-  color: black;
+  margin: 10px 0;
   font-size: 12px;
+  color: black;
+  background-color: white;
+  border: 1px solid grey;
 }
 
 .date {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid grey;
 }
 .score {
   width: 100%;
@@ -43,20 +43,28 @@
 .each-record {
   display: grid;
   grid-template-columns: 1fr 9fr;
-  border: 0.5px solid grey;
   text-align: center;
+}
+.each-record:first-child {
+  border-bottom: 1px solid grey;
+}
+.record-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .record-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .record-content > div {
-  border-left: 0.5px solid grey;
+  border-left: 1px solid grey;
 }
 
 .team > div {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
+  padding: 2px;
 }
 
 .win {
