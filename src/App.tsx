@@ -13,7 +13,12 @@ import {
   IconButton,
   InputBase,
   Modal,
-  Box,
+  FormGroup,
+  FormControlLabel,
+  FormControl,
+  Radio,
+  RadioGroup,
+  TextField,
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import champJson from "./assets/newJson.json";
@@ -188,7 +193,16 @@ function App() {
         </Container>
       </div>
       <Modal open={open} onClose={handleClose}>
-        <div className="modal-dialog">전적 입력 팝업</div>
+        <div className="modal-dialog">
+          <div className="modal-header">전적 입력 팝업</div>
+          <div className="modal-body">
+            <RadioGroup row defaultValue="blue" name="team">
+              <FormControlLabel value="blue" control={<Radio />} label="블루" />
+              <FormControlLabel value="red" control={<Radio />} label="레드" />
+            </RadioGroup>
+            {/* <TextField fullWidth /> */}
+          </div>
+        </div>
       </Modal>
     </div>
   );

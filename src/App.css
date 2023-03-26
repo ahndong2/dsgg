@@ -100,7 +100,7 @@
   font-size: 13px;
 }
 .player-item .line {
-  color: #e7ae48;
+  color: #b5b1aa;
 }
 .player-item .kda,
 .player-item .champ {
@@ -112,7 +112,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  padding: 40px;
+  width: 600px;
   background: white;
+}
+.modal-header {
+  padding: 20px 30px;
+}
+.modal-body {
+  padding: 0px 30px 20px;
 }
