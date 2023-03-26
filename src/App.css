@@ -21,7 +21,7 @@
 .score-board-wrapper {
   display: grid;
   grid-template-columns: 1fr 9fr;
-  margin: 10px 0;
+  margin: 12px 0;
   font-size: 12px;
   color: black;
   background-color: white;
@@ -75,4 +75,44 @@
 }
 .mvp {
   background: #fff2cc;
+}
+
+.player-title {
+  font-weight: bold;
+  padding-bottom: 8px;
+  font-size: 17px;
+}
+.player-item {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.player-item > div {
+  display: flex;
+  align-items: center;
+}
+.player-item .bot {
+  justify-content: space-between;
+}
+.player-item span:first-of-type {
+  margin-right: 4px;
+}
+.player-item .name {
+  font-size: 13px;
+}
+.player-item .line {
+  color: #e7ae48;
+}
+.player-item .kda,
+.player-item .champ {
+  opacity: 0.8;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background: white;
 }

@@ -12,13 +12,15 @@ import {
   Button,
   IconButton,
   InputBase,
+  Modal,
+  Box,
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import champJson from "./assets/newJson.json";
 import styled from "styled-components";
 
 const Loading = styled.div`
-  margin: 10px 0;
+  margin: 12px 0;
 `;
 const Avatar = styled.img`
   width: 16px;
@@ -48,6 +50,10 @@ function App() {
       [id]: value,
     });
   };
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div className="App">
       <div className="wrapper">
@@ -64,7 +70,9 @@ function App() {
               */}
               <Stack direction="row" justifyContent="space-between">
                 <Stack direction="row" spacing={1}>
-                  <Button variant="contained">전적 입력</Button>
+                  <Button variant="contained" onClick={handleOpen}>
+                    전적 입력
+                  </Button>
                   <Button variant="contained">팀 꾸려보기</Button>
                 </Stack>
                 <Paper
@@ -151,18 +159,27 @@ function App() {
               </section>
             </Grid>
             <Grid item xs={3}>
+              <div className="player-title">Player</div>
               <Stack spacing={1}>
-                {[1, 2, 3, 4, 5].map((champion, idx) => (
+                {[1, 2, 3].map((champion, idx) => (
                   <Paper
                     key={idx}
                     sx={{
-                      p: 2,
-                      fontSize: 13,
+                      px: 2,
+                      py: 1,
                       bgcolor: "rgb(255 255 255 / 15%)",
                       color: "white",
                     }}
+                    className="player-item"
                   >
-                    소환사 {idx + 1}
+                    <div className="top">
+                      <span className="name">이전도</span>
+                      <span className="line">[미드]</span>
+                    </div>
+                    <div className="bot">
+                      <span className="kda">6 / 5 / 10</span>
+                      <span className="champ">블라디미르</span>
+                    </div>
                   </Paper>
                 ))}
               </Stack>
@@ -170,6 +187,9 @@ function App() {
           </Grid>
         </Container>
       </div>
+      <Modal open={open} onClose={handleClose}>
+        <div className="modal-dialog">전적 입력 팝업</div>
+      </Modal>
     </div>
   );
 }
